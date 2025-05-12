@@ -14,7 +14,7 @@ model = load_model('models/braintumor_model.h5')
 class_labels = ['pituitary', 'glioma', 'notumor', 'meningioma']
 
 # Define the uploads folder
-UPLOAD_FOLDER = './uploads'
+UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
